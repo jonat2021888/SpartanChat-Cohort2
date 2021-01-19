@@ -1,0 +1,20 @@
+{
+  "name": "websocketchat",
+  "version": "1.0.0",
+  "description": "Practice Project including websockets, data parsing, and Electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "websocket",
+    "data",
+    "electron",
+    "nodejs"
+  ],
+  "author": "J. Torres",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^7.4.2"
+  }
+}

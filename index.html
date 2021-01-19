@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Websocket Chat Practice</title>
+  <script defer type="text/javascript">
+    var ws = new WebSocket('ws://localhost:81')
+
+    ws.onopen = function() {
+      console.log("Connection Secured!");
+    }
+
+    ws.onmessage = function(message) {
+      console.log(message.data);
+      messageBox = document.getElementById('messageBox')
+      messageBox.innerHTML += message.data + '<br>'
+    }
+
+    function send() {
+
+
+      textsBox = document.getElementById('texts')
+      ws.send(texts.value);
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <button class="button" onclick="send()">send</button>
+
+  <input type="text" id="texts" name=""></input>
+
+  <div id="messageBox">
+
+  </div>
+
+</body>
+
+</html>
